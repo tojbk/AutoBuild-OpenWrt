@@ -10,6 +10,9 @@ sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ                                          
 sed -i "s/'OpenWrt'/'iPhone'/g" package/base-files/files/bin/config_generate                            # 设置主机名
 
 git clone https://github.com/kenzok8/small package/gd772/gfw
+rm -rf package/gd772/gfw/luci-app-fchomo
+rm -rf package/gd772/gfw/luci-app-homeproxy
+rm -rf package/gd772/gfw/nikki
 rm -rf feeds/luci/applications/luci-app-openclash
 rm -rf feeds/luci/applications/luci-app-mosdns
 rm -rf feeds/luci/applications/luci-app-passwall
