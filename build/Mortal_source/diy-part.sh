@@ -7,7 +7,7 @@
 
 sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ                                                              # 设置密码为空
 
-sed -i "s/'OpenWrt'/'N1'/g" package/base-files/files/bin/config_generate                            # 设置主机名
+sed -i "s/'OpenWrt'/'iPhone'/g" package/base-files/files/bin/config_generate                            # 设置主机名
 
 # 在线更新时，删除不想保留固件的某个文件，在EOF跟EOF直接加入删除代码，记住这里对应的是固件的文件路径，比如： rm /etc/config/luci
 cat >$DELETE <<-EOF
