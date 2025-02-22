@@ -19,6 +19,9 @@ rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall2
 rm -rf feeds/luci/applications/luci-app-ssr-plus
 rm -rf feeds/luci/applications/luci-app-mosdnsfeeds
+rm -rf package/feeds/luci/luci-app-alist
+rm -rf package/gd772/gfw/luci-app-bypass
+rm -rf package/feeds/luci/luci-app-smartdns
 rm -rf feeds/packages/net/{alist,adguardhome,mosdns,xray*,v2ray*,v2ray*,sing*,smartdns}
 rm -rf feeds/packages/utils/v2dat
 
