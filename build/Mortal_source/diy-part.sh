@@ -9,6 +9,16 @@ sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ                                          
 
 sed -i "s/'OpenWrt'/'iPhone'/g" package/base-files/files/bin/config_generate                            # 设置主机名
 
+rm -rf feeds/luci/applications/luci-app-openclash
+git init OpenClash
+cd OpenClash
+git remote add origin https://github.com/vernesong/OpenClash.git
+git sparse-checkout init --cone
+git sparse-checkout set luci-app-openclash
+git pull origin master
+mv luci-app-openclash feeds/luci/applications
+rm -rf OpenClash
+
 # 在线更新时，删除不想保留固件的某个文件，在EOF跟EOF直接加入删除代码，记住这里对应的是固件的文件路径，比如： rm /etc/config/luci
 cat >$DELETE <<-EOF
 EOF
