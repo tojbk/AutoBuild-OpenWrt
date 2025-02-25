@@ -9,21 +9,8 @@ sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ                                          
 
 sed -i "s/'OpenWrt'/'iPhone'/g" package/base-files/files/bin/config_generate                            # 设置主机名
 
-git clone https://github.com/kenzok8/small package/gd772/gfw
-rm -rf package/gd772/gfw/luci-app-fchomo
-rm -rf package/gd772/gfw/luci-app-homeproxy
-rm -rf package/gd772/gfw/luci-app-nikki
+git clone https://github.com/kenzok8/small package/gd772
 rm -rf feeds/luci/applications/luci-app-openclash
-rm -rf feeds/luci/applications/luci-app-mosdns
-rm -rf feeds/luci/applications/luci-app-passwall
-rm -rf feeds/luci/applications/luci-app-passwall2
-rm -rf feeds/luci/applications/luci-app-ssr-plus
-rm -rf feeds/luci/applications/luci-app-mosdnsfeeds
-rm -rf package/feeds/luci/luci-app-alist
-rm -rf package/gd772/gfw/luci-app-bypass
-rm -rf package/feeds/luci/luci-app-smartdns
-rm -rf feeds/packages/net/{alist,adguardhome,mosdns,xray*,v2ray*,v2ray*,sing*,smartdns}
-rm -rf feeds/packages/utils/v2dat
 
 # 在线更新时，删除不想保留固件的某个文件，在EOF跟EOF直接加入删除代码，记住这里对应的是固件的文件路径，比如： rm /etc/config/luci
 cat >$DELETE <<-EOF
