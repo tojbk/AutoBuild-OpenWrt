@@ -27,3 +27,4 @@
 # sed -i 's/"Argon 主题设置"/"Argon设置"/g' `grep "Argon 主题设置" -rl ./`
 
 rm -rf feeds/luci/applications/luci-app-openclash
+git clone https://github.com/tojbk/luci-app-openclash feeds/luci/applications
