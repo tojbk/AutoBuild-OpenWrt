@@ -9,9 +9,6 @@
 
 # sed -i "s/'OpenWrt'/'iPhone'/g" package/base-files/files/bin/config_generate                            # 设置主机名
 
-git clone https://github.com/kenzok8/small package/gd772
-rm -rf feeds/luci/applications/luci-app-openclash
-
 # 在线更新时，删除不想保留固件的某个文件，在EOF跟EOF直接加入删除代码，记住这里对应的是固件的文件路径，比如： rm /etc/config/luci
 # cat >$DELETE <<-EOF
 # EOF
@@ -28,3 +25,5 @@ rm -rf feeds/luci/applications/luci-app-openclash
 # sed -i 's/"管理权"/"改密码"/g' `grep "管理权" -rl ./`
 # sed -i 's/"带宽监控"/"监控"/g' `grep "带宽监控" -rl ./`
 # sed -i 's/"Argon 主题设置"/"Argon设置"/g' `grep "Argon 主题设置" -rl ./`
+
+rm -rf feeds/luci/applications/luci-app-openclash
